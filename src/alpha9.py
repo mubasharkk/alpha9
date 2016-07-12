@@ -31,20 +31,19 @@ class SearchEngine  ():
                 
         return list
         
-        
+    # Can be scanned once and saved in a file or DBMS
     def scanLibrary (self):
-        print 'scanning...';
-#        print datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
-        print datetime.datetime.now()
+        print 'scanning...', datetime.datetime.now()
         self.wordArray = []
         for book in self.booksList:
-#            print book
             self.wordArray += self.scanBook(book);
             
         self.wordArray = Counter(self.wordArray);
-        print 'Library scanning completed!';
-        print datetime.datetime.now()
+        print 'Library scanning completed!', datetime.datetime.now()
 
+    """ Function complexity highly dependent on No. of files.
+    For a larger set of files/data the memory will exhaust quickly
+    """    
     def scanBook (self, bookPath):
         
         wordArray = [];
@@ -71,8 +70,7 @@ class SearchEngine  ():
         return self.wordArray.most_common(num);
     
     def searchKeyword(self, word):
-        print 'Searching for : ' + word
-        print 'searching...';
+        print 'Searching for : ' , word,  'searching...';
         
         self.wordArray = []
         files = [];

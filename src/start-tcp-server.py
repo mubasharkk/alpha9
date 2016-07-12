@@ -77,7 +77,10 @@ class MyTCPHandler(SocketServer.StreamRequestHandler):
         if args[0] is None:
             return 'Nothing to find!'
         
+        """ Needs to transform the UTF8 'keyword' value to ASCII
+        to be able to search into the files"""        
 #        keyword = self.transform_word(args[0].lower())
+
         keyword = args[0].lower()
         
         ans = self.engine.searchKeyword(keyword);
