@@ -38,7 +38,7 @@ $ python src/start-tcp-server.py
 $ telnet 0.0.0.0 9999
 
 -- search command
-> search [word] (file-count) (e.g. search Dienst 20)
+> search {word} (file-count) (e.g. search Dienst 20)
 
 -- common command - top common words in files
 > common (word-count) (e.g. common 20)
