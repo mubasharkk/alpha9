@@ -1,14 +1,9 @@
-# alpha9
-
-Search within Books (a mini search engine)
-
- 
+# Alpha9 - Search within Books (a mini search engine)
 
 Interview-Files: https://www.dropbox.com/s/.............
 
- 
 
-Notes / Task
+# Notes / Task
 
 ·         Read the txt files
 
